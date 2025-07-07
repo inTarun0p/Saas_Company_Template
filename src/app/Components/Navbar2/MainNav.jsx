@@ -44,7 +44,7 @@ export default function NavbarDemo() {
           <NavbarLogo />
           <NavItems items={navItems} />
           <div className="flex items-center gap-4 hover:bg-">
-            <NavbarButton variant="primary"><Link href="/signup"> Sign UP</Link></NavbarButton>
+            <NavbarButton variant="primary"><Link href="/signup"> Sign Up</Link></NavbarButton>
             <NavbarButton variant="secondary"><Link href="/contactus">Book a Call</Link></NavbarButton>
           </div>
         </NavBody>
@@ -86,7 +86,7 @@ export default function NavbarDemo() {
                 variant="primary"
                 className="w-full bg-white text-black"
               >
-                <Link href="/contactus">Book a call</Link>
+                <Link href="/contactus">Book a Call</Link>
               </NavbarButton>
             </div>
           </MobileNavMenu>

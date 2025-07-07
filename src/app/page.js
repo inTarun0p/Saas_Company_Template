@@ -19,31 +19,31 @@ export default function Home() {
     <>
       <Hero />
       <div className="w-full px-35">
-        <LazyLoad>
+        <LazyLoad fallback={<div>Loading...</div>}>
           <MarqueeDemo />
         </LazyLoad>
         
-        <LazyLoad>
+        <LazyLoad fallback={<div>Loading...</div>}>
           <HoverSliderDemo />
         </LazyLoad>
         
-        <LazyLoad>
+        <LazyLoad fallback={<div>Loading...</div>}>
           <FeatureDemo />
         </LazyLoad>
         
-        <LazyLoad>
+        <LazyLoad fallback={<div>Loading...</div>}>
           <Features />
         </LazyLoad>
         
-        <LazyLoad>
+        <LazyLoad fallback={<div>Loading...</div>}>
           <ShuffleHeroDemo />
         </LazyLoad>
         
-        <LazyLoad>
+        <LazyLoad fallback={<div>Loading...</div>}>
           <Accordion_02 />
         </LazyLoad>
         
-        <LazyLoad>
+        <LazyLoad fallback={<div>Loading...</div>}>
           <AnimatedTestimonialsDemo />
         </LazyLoad>
       </div>

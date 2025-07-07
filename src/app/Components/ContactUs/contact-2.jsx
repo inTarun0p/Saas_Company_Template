@@ -17,7 +17,7 @@ export const Contact2 = ({
     <section className="py-32">
       <div className="container">
         <div
-          className="mx-auto flex max-w-screen-xl flex-col justify-between gap-10 lg:flex-row lg:gap-20">
+          className="mx-auto flex max-w-screen-xl flex-col justify-between border-none gap-10 lg:flex-row lg:gap-20">
           <div className="mx-auto flex max-w-sm flex-col justify-between gap-10">
             <div className="text-center lg:text-left">
               <h1 className="mb-2 text-5xl font-semibold lg:mb-1 lg:text-6xl">
@@ -50,7 +50,7 @@ export const Contact2 = ({
             </div>
           </div>
           <div
-            className="mx-auto flex max-w-screen-md flex-col gap-6 rounded-lg border p-10 bg-[#121212]">
+            className="mx-auto flex max-w-screen-md flex-col gap-6 rounded-lg border-none p-10 bg-[#121212]">
             <div className="flex gap-4">
               <div className="grid w-full items-center gap-1.5">
                 <Label htmlFor="firstname">First Name</Label>
@@ -73,7 +73,7 @@ export const Contact2 = ({
               <Label htmlFor="message">Message</Label>
               <Textarea placeholder="Type your message here." id="message" />
             </div>
-            <Button className="w-full bg-white text-black hover:bg-[#88734C] hover:text-white">Send Message</Button>
+            <Button className="w-full bg-white text-black hover:bg-[#88734C] hover:text-white border-none">Send Message</Button>
           </div>
         </div>
       </div>
