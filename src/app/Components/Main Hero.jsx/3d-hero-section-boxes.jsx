@@ -81,7 +81,7 @@ function HeroContent() {
             <Link href="/contactus">Contact Us</Link>
           </button>
           <button
-            className="pointer-events-auto bg-white text-black font-semibold py-2.5 sm:py-3.5 px-6 sm:px-8 rounded-2xl transition duration-300 hover:scale-105 flex items-center justify-center w-full sm:w-auto">
+            className="pointer-events-auto bg-white hover:bg-[#87734C] hover:text-white text-black font-semibold py-2.5 sm:py-3.5 px-6 sm:px-8 rounded-2xl transition duration-300 hover:scale-105 flex items-center justify-center w-full sm:w-auto">
 
             Get Started
           </button>
