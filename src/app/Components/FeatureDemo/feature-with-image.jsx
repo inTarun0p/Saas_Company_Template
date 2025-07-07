@@ -7,7 +7,7 @@ function Feature() {
         <div className="flex flex-col-reverse lg:flex-row gap-10 lg:items-center">
           <div className="relative w-full aspect-video h-full flex-1">
             <img
-              src="https://picsum.photos/1200/800"
+              src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               alt="Feature showcase"
               className="w-full h-full object-cover rounded-md"
             />

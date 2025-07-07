@@ -2,7 +2,7 @@
 
 import React, { useEffect, useRef } from 'react';
 import Spline from '@splinetool/react-spline';
-
+import Link from 'next/link';
 function HeroSplineBackground() {
   return (
     <div
@@ -78,7 +78,7 @@ function HeroContent() {
           className="flex pointer-events-auto flex-col sm:flex-row items-start space-y-3 sm:space-y-0 sm:space-x-3">
           <button
             className="border border-white text-white font-semibold py-2.5 sm:py-3.5 px-6 sm:px-8 rounded-2xl transition duration-300 w-full sm:w-auto hover:bg-white hover:text-black">
-            Contact Us
+            <Link href="/contactus">Contact Us</Link>
           </button>
           <button
             className="pointer-events-auto bg-white text-black font-semibold py-2.5 sm:py-3.5 px-6 sm:px-8 rounded-2xl transition duration-300 hover:scale-105 flex items-center justify-center w-full sm:w-auto">
