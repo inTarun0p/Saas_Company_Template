@@ -59,7 +59,7 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <div className="space-y-5 px-25">
+      <div className=" px-25">
       
          <MarqueeDemo />
 
@@ -80,7 +80,7 @@ export default function Home() {
         <Accordion_02 />
         </LazyLoad>
         <LazyLoad>
-        <AnimatedTestimonialsDemo />
+        <AnimatedTestimonialsDemo className="mb-5 py-[-50px]"/>
         </LazyLoad>
       </div>
     </>
