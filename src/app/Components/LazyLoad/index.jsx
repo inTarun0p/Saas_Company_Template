@@ -28,7 +28,7 @@ export default function LazyLoad({ children, threshold = 0.1 }) {
   return (
     <div 
       ref={setRef} 
-      className={`transition-opacity duration-1000 ${isVisible ? 'opacity-100' : 'opacity-0'}`}
+      className={`transition-opacity duration-1000 ${isVisible && window.scrollY > ref.getBoundingClientRect().top ? 'opacity-100' : 'opacity-0'}`}
     >
       {children}
     </div>

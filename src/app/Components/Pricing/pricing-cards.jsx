@@ -9,25 +9,59 @@ import {
   CardTitle,
 } from "@/app/Components/Pricing/card";
 import { Button } from "@/app/Components/Pricing/button";
+import { motion } from "framer-motion";
 
-function Pricing() {
+const container = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2
+    }
+  }
+};
+
+const item = {
+  hidden: { opacity: 0, y: 20 },
+  show: { 
+    opacity: 1, 
+    y: 0,
+    transition: {
+      duration: 0.6,
+      ease: [0.16, 1, 0.3, 1]
+    }
+  }
+};
+
+export function Pricing() {
   return (
-    <div className="w-full py-20 lg:py-40">
-      <div className="container mx-auto">
-        <div className="flex text-center justify-center items-center gap-4 flex-col px-35">
+    <motion.div className="w-full py-20 lg:py-40">
+      <motion.div className="container mx-auto">
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+          className="flex text-center justify-center items-center gap-4 flex-col px-35"
+        >
           <Badge className={"text-[#88734C]"}>Pricing</Badge>
           <div className="flex gap-2 flex-col">
-            <h2
-              className="text-3xl md:text-5xl tracking-tighter max-w-xl text-center font-regular">
+            <h2 className="text-3xl md:text-5xl tracking-tighter max-w-xl text-center font-regular">
               Prices that make sense!
             </h2>
-            <p
-              className="text-lg leading-relaxed tracking-tight text-muted-foreground max-w-xl text-center">
+            <p className="text-lg leading-relaxed tracking-tight text-muted-foreground max-w-xl text-center">
               Managing a small business today is already tough.
             </p>
           </div>
-          <div className="grid pt-20 text-left grid-cols-1 lg:grid-cols-3 w-full gap-8">
-            <Card className="w-full rounded-md">
+        </motion.div>
+        <motion.div 
+          variants={container}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, margin: "-100px" }}
+          className="grid pt-20 text-left grid-cols-1 lg:grid-cols-3 w-full gap-8"
+        >
+            <motion.div variants={item}>
+              <Card className="w-full rounded-md">
               <CardHeader>
                 <CardTitle>
                   <span className="flex flex-row gap-4 items-center font-normal">
@@ -82,8 +116,10 @@ function Pricing() {
                   </Button>
                 </div>
               </CardContent>
-            </Card>
-            <Card className="w-full shadow-2xl rounded-md">
+              </Card>
+            </motion.div>
+            <motion.div variants={item}>
+              <Card className="w-full shadow-2xl rounded-md">
               <CardHeader>
                 <CardTitle>
                   <span className="flex flex-row gap-4 items-center font-normal">
@@ -141,8 +177,10 @@ function Pricing() {
                   </Button>
                 </div>
               </CardContent>
-            </Card>
-            <Card className="w-full rounded-md">
+              </Card>
+            </motion.div>
+            <motion.div variants={item}>
+              <Card className="w-full rounded-md">
               <CardHeader>
                 <CardTitle>
                   <span className="flex flex-row gap-4 items-center font-normal">
@@ -197,12 +235,10 @@ function Pricing() {
                   </Button>
                 </div>
               </CardContent>
-            </Card>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
+              </Card>
+            </motion.div>
+          </motion.div>
+        </motion.div>
+      </motion.div>
+  )
 }
-
-export { Pricing };
