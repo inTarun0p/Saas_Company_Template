@@ -178,9 +178,13 @@ export default function Login05() {
     e.preventDefault()
     console.log(Data)
     try{
+      const result = await signUP(Data)
+      console.log(result)
+      toast.success("User created successfully")
       
     }catch(error){
       console.log(error)
+      toast.error("User not created")
     }
   }
   return (
@@ -211,7 +215,7 @@ export default function Login05() {
                   name="name-login-05"
                   autoComplete="name-login-05"
                   placeholder="Name"
-                  className="mt-2 text-[#88734C]"
+                  className="mt-2 text-white"
                   value={Data.name}
                   onChange={(e) => setData({...Data,name:e.target.value})} />
               </div>
@@ -228,7 +232,7 @@ export default function Login05() {
                   name="email-login-05"
                   autoComplete="email-login-05"
                   placeholder="ephraim@blocks.so"
-                  className="mt-2"
+                  className="mt-2 text-white"
                   value={Data.email}
                   onChange={(e) => setData({...Data,email:e.target.value})}    />
               </div>
@@ -245,7 +249,7 @@ export default function Login05() {
                   name="password-login-05"
                   autoComplete="password-login-05"
                   placeholder="Password"
-                  className="mt-2"
+                  className="mt-2 text-white"
                   value={Data.password}
                   onChange={(e) => setData({...Data,password:e.target.value})} />
               </div>
@@ -262,7 +266,7 @@ export default function Login05() {
                   name="confirm-password-login-05"
                   autoComplete="confirm-password-login-05"
                   placeholder="Password"
-                  className="mt-2"
+                  className="mt-2 text-white"
                   value={Data.confirmPassword}
                   onChange={(e) => setData({...Data,confirmPassword:e.target.value})} />
               </div>

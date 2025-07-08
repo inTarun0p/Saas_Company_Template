@@ -59,7 +59,7 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <div className="space-y-20 px-25">
+      <div className="space-y-5 px-25">
         <LazyLoad>
          <MarqueeDemo />
 
