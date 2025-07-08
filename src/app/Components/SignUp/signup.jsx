@@ -179,6 +179,8 @@ export default function Login05() {
     console.log(Data)
     try{
       
+    }catch(error){
+      console.log(error)
     }
   }
   return (
