@@ -2,6 +2,7 @@
 'use client';
 
 import dynamic from 'next/dynamic';
+import LazyLoad from './Components/LazyLoad';
 
 // Loading component for better UX
 const LoadingSpinner = () => (
@@ -58,14 +59,29 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <div className="space-y-20">
-        <MarqueeDemo />
+      <div className="space-y-20 px-25">
+        <LazyLoad>
+         <MarqueeDemo />
+
+        </LazyLoad>
+        <LazyLoad>
         <HoverSliderDemo />
+        </LazyLoad>
+        <LazyLoad>
         <FeatureDemo />
+        </LazyLoad>
+        <LazyLoad>
         <Features />
+        </LazyLoad>
+        <LazyLoad>
         <ShuffleHeroDemo />
+        </LazyLoad>
+        <LazyLoad>
         <Accordion_02 />
+        </LazyLoad>
+        <LazyLoad>
         <AnimatedTestimonialsDemo />
+        </LazyLoad>
       </div>
     </>
   );

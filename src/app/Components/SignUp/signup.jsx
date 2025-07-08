@@ -167,6 +167,20 @@ const Logo = (props) => (
 );
 
 export default function Login05() {
+  const[Data,setData] = React.useState({
+    name:"",
+    email:"",
+    password:"",
+    confirmPassword:""
+  })
+
+  const handleSubmit = async(e) => {
+    e.preventDefault()
+    console.log(Data)
+    try{
+      
+    }
+  }
   return (
     <div className="flex items-center justify-center min-h-screen bg-black">
       <div className="flex flex-1 flex-col justify-center px-4 py-10 lg:px-6 bg-black">
@@ -182,7 +196,7 @@ export default function Login05() {
 
         <Card className="mt-4 bg-[#121212] sm:mx-auto sm:w-full sm:max-w-md border-none">
           <CardContent>
-            <form action="#" method="post" className="space-y-4">
+            <form action="#" method="post" className="space-y-4" onSubmit={handleSubmit}>
               <div>
                 <Label
                   htmlFor="name-login-05"
@@ -195,7 +209,9 @@ export default function Login05() {
                   name="name-login-05"
                   autoComplete="name-login-05"
                   placeholder="Name"
-                  className="mt-2 text-[#88734C]" />
+                  className="mt-2 text-[#88734C]"
+                  value={Data.name}
+                  onChange={(e) => setData({...Data,name:e.target.value})} />
               </div>
 
               <div>
@@ -210,7 +226,9 @@ export default function Login05() {
                   name="email-login-05"
                   autoComplete="email-login-05"
                   placeholder="ephraim@blocks.so"
-                  className="mt-2" />
+                  className="mt-2"
+                  value={Data.email}
+                  onChange={(e) => setData({...Data,email:e.target.value})}    />
               </div>
 
               <div>
@@ -225,7 +243,9 @@ export default function Login05() {
                   name="password-login-05"
                   autoComplete="password-login-05"
                   placeholder="Password"
-                  className="mt-2" />
+                  className="mt-2"
+                  value={Data.password}
+                  onChange={(e) => setData({...Data,password:e.target.value})} />
               </div>
 
               <div>
@@ -240,7 +260,9 @@ export default function Login05() {
                   name="confirm-password-login-05"
                   autoComplete="confirm-password-login-05"
                   placeholder="Password"
-                  className="mt-2" />
+                  className="mt-2"
+                  value={Data.confirmPassword}
+                  onChange={(e) => setData({...Data,confirmPassword:e.target.value})} />
               </div>
 
               <div className="mt-2 flex items-start">
