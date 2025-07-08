@@ -60,13 +60,13 @@ export default function Home() {
     <>
       <Hero />
       <div className="space-y-5 px-25">
-        <LazyLoad>
+      
          <MarqueeDemo />
 
-        </LazyLoad>
-        <LazyLoad>
+        
+        
         <HoverSliderDemo />
-        </LazyLoad>
+        
         <LazyLoad>
         <FeatureDemo />
         </LazyLoad>
