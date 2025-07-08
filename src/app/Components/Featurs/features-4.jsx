@@ -2,7 +2,7 @@ import { Cpu, Fingerprint, Pencil, Settings2, Sparkles, Zap } from 'lucide-react
 
 export function Features() {
     return (
-        <section className="py-12 md:py-20">
+        <section className="py-12 md:py-5 mb-20">
             <div className="mx-auto max-w-5xl space-y-8 px-6 md:space-y-16">
                 <div
                     className="relative z-10 mx-auto max-w-xl space-y-6 text-center md:space-y-12">
